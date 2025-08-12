@@ -1,0 +1,17 @@
+# Python virtual environment
+.venv/
+venv/
+ENV/
+
+# Generated files
+control_strategy
+control_strategy.png
+
+# Python cache files
+__pycache__/
+*.py[cod]
+*$py.class
+
+# IDE settings
+.vscode/
+.idea/

@@ -1,0 +1,30 @@
+{
+    "nodes": [
+      {"id": "CP-8", "label": "Specification: Description, Assay, Identification, Related Substances"},
+      {"id": "CP-6", "label": "IPC: CP-4, Unspecified impurity, Total impurity"},
+      {"id": "CP-7", "label": "IPC: CP-7-1, Unspecified impurity, Total impurity"},
+      {"id": "Step4CPPs", "label": "Step 4 CPPs: Water addition in crystallization, Cooling rate"},
+      {"id": "Sakuramil", "label": "Sakuramil Drug Substance\nSpecification: Assay, CP-6, CP-8-1, CP-8, Unspecified impurity, Total impurity\nAnalytical Procedures\nStore below 25°C, LDPE bag with tie-wrap, Retest period 24 months"},
+      {"id": "Granules", "label": "Granules\nCPP: Binder solution rate, Spray rate, Inlet air volume, Inlet air temp, Product temp"},
+      {"id": "UncoatedTablets", "label": "Uncoated Tablets\nCPP: Blend revolutions\nIPC: Tablet Weight, Weight variation, Hardness, Uniformity of Dosage Units, Assay"},
+      {"id": "FinalDosageForm", "label": "Final Dosage Form\nSpecification: Description, Identification, Assay, Uniformity of Dosage Units, Dissolution, CP-9-1, Unspecified degradation products, Microbiology, CP-9.1, CP-8, Unspecified impurity, Total impurity\nAnalytical procedures\nBulk storage in Aluminium composite bag"},
+      {"id": "PackagedProduct", "label": "Packaged Product\nSpecification for: PA/AL/PVC Blister Pack, 90 cc round HDPE Bottle, 38 mm Child resistant closure\nDo not store above 25°C\nShelf Life: 18 months"},
+      {"id": "Lactose", "label": "Lactose Hydrate, Microcrystalline Cellulose, Croscarmellose Sodium\nCompendial Specification, Batch Formula"},
+      {"id": "MagStearate", "label": "Magnesium Stearate\nCompendial Specification, Batch Formula"},
+      {"id": "BasicCoating", "label": "Basic Coating Premix, Red\nSpecification, Batch Formula\nIPC: Loss on Drying"}
+    ],
+    "edges": [
+      {"from": "CP-6", "to": "CP-7"},
+      {"from": "CP-7", "to": "Step4CPPs"},
+      {"from": "Step4CPPs", "to": "Sakuramil"},
+      {"from": "CP-8", "to": "Sakuramil"},
+      {"from": "Lactose", "to": "Sakuramil"},
+      {"from": "Sakuramil", "to": "Granules"},
+      {"from": "MagStearate", "to": "Granules"},
+      {"from": "Granules", "to": "UncoatedTablets"},
+      {"from": "BasicCoating", "to": "UncoatedTablets"},
+      {"from": "UncoatedTablets", "to": "FinalDosageForm"},
+      {"from": "FinalDosageForm", "to": "PackagedProduct"}
+    ]
+  }
+  
